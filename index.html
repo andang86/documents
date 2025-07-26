@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난징 역사 기행</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .card-container:hover .card {
+            transform: rotateY(5deg);
+        }
+        .section-title-underline {
+            display: inline-block;
+            border-bottom: 3px solid #4f46e5;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-gray-900">난징 역사 기행</h1>
+            <p class="text-md text-gray-600 mt-1">과거를 돌아보고 현재를 생각하는 여행</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Section: Morning -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-indigo-700">오전: 역사의 상흔을 마주하다</h2>
+            
+            <!-- 남경대학살기념관 -->
+            <div class="card-container mb-12">
+                <article class="card bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+                    <div class="md:w-1/2">
+                        <img class="h-full w-full object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Memorial_Hall_of_the_Victims_in_Nanjing_Massacre_by_Japanese_Invaders_at_dusk_2018.jpg/1280px-Memorial_Hall_of_the_Victims_in_Nanjing_Massacre_by_Japanese_Invaders_at_dusk_2018.jpg" alt="남경대학살기념관 외부 전경" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333/FFF?text=Image+Not+Found';">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900">남경대학살기념관</h3>
+                        <p class="text-sm text-gray-500 mb-4">The Memorial Hall of the Victims in Nanjing Massacre</p>
+                        <p class="mb-6">1937년 일본군이 자행한 난징 대학살의 희생자들을 추모하고, 전쟁의 참상을 고발하여 평화의 소중함을 알리는 공식 추모관입니다.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2 section-title-underline">주요 관람 포인트</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong>만인갱(万人坑) 유적:</strong> 학살된 희생자들의 유골이 발굴된 장소를 보존한 곳으로, 역사의 비극을 직시하게 합니다.</li>
+                            <li><strong>역사 자료 전시:</strong> 학살 당시의 사진, 영상, 생존자 증언 등 방대한 자료를 통해 참상의 실체를 다각도로 조명합니다.</li>
+                            <li><strong>상징적 건축물:</strong> 무채색과 날카로운 선으로 구성된 기념관 건물 자체가 비극적 역사를 웅변하며 평화의 메시지를 전달합니다.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 위안부 박물관 -->
+            <div class="card-container">
+                <article class="card bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+                     <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900">난징 리지샹 위안소 옛터 진열관</h3>
+                        <p class="text-sm text-gray-500 mb-4">Nanjing Liji Lane Comfort Station Site Museum</p>
+                        <p class="mb-6">실제 위안소로 사용되었던 건물을 복원한 박물관으로, 한중 양국 피해자들의 고통스러운 증언이 살아 숨 쉬는 역사의 현장입니다.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2 section-title-underline">주요 관람 포인트</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong>피해자들의 사진과 증언:</strong> 벽면을 가득 채운 피해 할머니들의 기록은 '위안부' 제도의 반인륜성을 고발합니다.</li>
+                            <li><strong>눈물 자국 벽(泪洒墙):</strong> 피해 할머니들의 얼굴 조각상 아래로 흐르는 물은 그들의 끝나지 않은 눈물을 상징합니다.</li>
+                            <li><strong>복원된 위안소:</strong> 좁고 참혹했던 당시의 방을 그대로 재현하여 비인간적인 환경을 직접 체감하게 합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img class="h-full w-full object-cover" src="https://i.ytimg.com/vi/qYc21xX7q8s/maxresdefault.jpg" alt="위안부 박물관의 눈물 자국 벽" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333/FFF?text=Image+Not+Found';">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Afternoon -->
+        <section>
+            <h2 class="text-4xl font-bold mb-8 text-center text-teal-700">오후: 한 시대의 시작과 끝을 돌아보다</h2>
+
+            <!-- 중산릉 -->
+            <div class="card-container mb-12">
+                <article class="card bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+                    <div class="md:w-1/2">
+                        <img class="h-full w-full object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sun_Yat-sen_Mausoleum%2C_Nanjing%2C_China_-_20180321110452.jpg/1280px-Sun_Yat-sen_Mausoleum%2C_Nanjing%2C_China_-_20180321110452.jpg" alt="중산릉으로 올라가는 계단" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333/FFF?text=Image+Not+Found';">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900">중산릉 (中山陵)</h3>
+                        <p class="text-sm text-gray-500 mb-4">Sun Yat-sen Mausoleum</p>
+                        <p class="mb-6">중국 혁명의 아버지이자 중화민국을 건립한 쑨원의 묘입니다. 중국 근대 건축사상 가장 웅장하고 대표적인 기념 건축물로 꼽힙니다.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2 section-title-underline">주요 관람 포인트</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong>392개의 계단:</strong> 제당까지 이어지는 계단은 당시 중국 인구(3억 9천 2백만 명)를 상징하며, 혁명의 험난한 과정을 느끼게 합니다.</li>
+                            <li><strong>제당(祭堂):</strong> 능의 가장 높은 곳에 위치한 건물로, 쑨원의 좌상과 중화민국의 청천백일기 문양이 장엄함을 더합니다.</li>
+                            <li><strong>독특한 건축 양식:</strong> 전통 능묘 양식과 서양 건축 기법을 결합하여 장엄하면서도 세련된 아름다움을 보여줍니다.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 명효릉 -->
+            <div class="card-container">
+                <article class="card bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-900">명효릉 (明孝陵)</h3>
+                        <p class="text-sm text-gray-500 mb-4">Ming Xiaoling Mausoleum</p>
+                        <p class="mb-6">명나라를 건국한 태조 주원장과 마황후의 합장릉으로, 유네스코 세계문화유산에 등재된 중국 명·청 시대 황제릉의 원형입니다.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2 section-title-underline">주요 관람 포인트</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li><strong>신도(神道):</strong> 능으로 이어지는 길 양옆으로 낙타, 코끼리 등 6종류의 동물 석상과 문무인 석상이 도열하여 장관을 이룹니다.</li>
+                            <li><strong>방성명루(方城明楼):</strong> 능의 본체 앞에 세워진 거대한 성채형 건물로, 황제의 무덤임을 알리는 비석이 안치되어 있습니다.</li>
+                            <li><strong>보정(宝顶):</strong> 주원장과 마황후가 잠들어 있는 거대한 원형 봉분으로, 600년 넘게 도굴되지 않고 원형을 보존하고 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img class="h-full w-full object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ming_Xiaoling_mausoleum_Nanjing_elephant_statues_on_spirit_way_in_autumn.jpg/1280px-Ming_Xiaoling_mausoleum_Nanjing_elephant_statues_on_spirit_way_in_autumn.jpg" alt="명효릉의 신도와 석상들" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333/FFF?text=Image+Not+Found';">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Nanjing Historic Sites Tour. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
