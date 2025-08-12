@@ -3,170 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프리네가족 난징 역사 기행</title>
+    <title>다낭성난소증후군 배란 유도 과정</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Noto Sans KR 폰트 적용 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
         }
-        .tab-active {
-            border-color: #4338ca; /* Indigo-700 */
-            background-color: #e0e7ff; /* Indigo-100 */
-            color: #3730a3; /* Indigo-800 */
-            font-weight: 700;
+        /* 타임라인의 세로선을 위한 커스텀 스타일 */
+        .timeline-item-container {
+            position: relative;
+            padding-left: 2.5rem; /* 40px */
+            padding-bottom: 3rem; /* 48px */
         }
-        .tab-inactive {
-            border-color: transparent;
-            color: #374151; /* Gray-700 */
+        /* 마지막 아이템의 아래쪽 패딩 제거 */
+        .timeline-item-container:last-child {
+            padding-bottom: 0;
         }
-        .tab-content { display: none; }
-        .tab-content-active { display: block; }
-        .content-section h4 {
-            font-size: 1.25rem; font-weight: 700; color: #1f2937;
-            border-left: 4px solid #4f46e5; padding-left: 0.75rem;
-            margin-top: 1.5rem; margin-bottom: 1rem;
+        /* 타임라인 세로선 */
+        .timeline-item-container::before {
+            content: '';
+            position: absolute;
+            left: 0.4rem; /* 6px */
+            top: 0.5rem; /* 8px */
+            bottom: 0;
+            width: 2px;
+            background-color: #d1d5db; /* gray-300 */
         }
-        .content-section p, .content-section ul { line-height: 1.8; }
+        /* 마지막 아이템의 세로선 숨김 */
+        .timeline-item-container:last-child::before {
+            height: 0;
+        }
+        /* 타임라인 원형 점 */
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.5rem; /* 8px */
+            height: 1rem; /* 16px */
+            width: 1rem; /* 16px */
+            background-color: white;
+            border-radius: 9999px;
+            border-width: 3px;
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-            <h1 class="text-4xl font-extrabold text-indigo-800 tracking-tight">✨ 프리네가족 난징 역사 기행 ✨</h1>
-            <p class="text-lg text-gray-600 mt-2">과거와 현재가 만나는 특별한 시간</p>
-        </div>
-    </header>
+    <!-- 페이지 컨테이너 -->
+    <div class="container mx-auto max-w-3xl p-4 sm:p-6 lg:p-8">
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 헤더 -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">다낭성난소증후군 배란 유도 과정</h1>
+            <p class="mt-3 text-lg text-gray-600">임신 준비를 위한 일반적인 배란 유도 주기 타임라인</p>
+        </header>
 
-        <section id="announcements" class="mb-8">
-            <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">📢 오늘의 공지사항</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2">🗓️ 2025년 7월 27일 (일) 날씨</h3>
-                    <p class="text-3xl font-bold">34°C / 27°C</p>
-                    <p class="mt-2">오전에는 맑지만, 오후에 약한 비 소식이 있어요. 덥고 습하니 시원한 옷차림과 작은 우산을 준비해주세요!</p>
-                </div>
-                <div class="bg-green-100 border-l-4 border-green-500 text-green-800 p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2">이건 첫번째 lesson!</h3>
-                    <p class="text-3xl font-bold">🕖 7시 조식 집결</p>
-                    <p class="mt-2">든든하게 먹어야 힘차게 다닐 수 있어요. 늦지 않게 모여주세요!</p>
-                </div>
-                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2">이건 두번째 lesson!</h3>
-                    <p class="text-3xl font-bold">🕣 8시 10분 출발</p>
-                    <p class="mt-2">시간은 금! 즐거운 여행을 위해 출발 시간을 꼭 지켜주세요!</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="bg-white rounded-lg shadow-lg">
-            <div id="tab-buttons" class="border-b border-gray-200">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab-button whitespace-nowrap py-4 px-6 border-b-2 text-sm font-medium" data-tab="1">남경대학살기념관</button>
-                    <button class="tab-button whitespace-nowrap py-4 px-6 border-b-2 text-sm font-medium" data-tab="2">위안부 박물관</button>
-                    <button class="tab-button whitespace-nowrap py-4 px-6 border-b-2 text-sm font-medium" data-tab="3">중산릉</button>
-                    <button class="tab-button whitespace-nowrap py-4 px-6 border-b-2 text-sm font-medium" data-tab="4">명효릉</button>
-                </nav>
-            </div>
-
-            <div id="tab-contents" class="p-6 md:p-8 content-section">
-                <div id="tab-content-1" class="tab-content">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">남경대학살기념관</h3>
-                    <p class="text-gray-600 mb-6">인류의 비극을 기억하고 평화를 염원하는 묵직한 공간</p>
-                    <h4>개요 및 역사적 배경</h4>
-                    <p>정식 명칭은 '침화일군남경대도살우난동포기념관(侵华日军南京大屠杀遇难同胞纪念馆)'입니다. 1937년 12월 13일, 일본군이 난징을 점령한 후 6주간에 걸쳐 약 30만 명의 중국군 포로와 민간인을 학살한 참사를 기록하고 희생자들을 추모하기 위해 설립되었습니다. 기념관은 실제 학살과 매장이 이루어졌던 장소 중 한 곳인 '만인갱(万人坑)' 유적지 위에 세워져, 방문객에게 더욱 큰 충격과 슬픔을 안겨줍니다. 이곳은 단순한 반일 감정의 표출을 넘어, 전쟁의 잔혹성을 고발하고 인류 보편의 가치인 평화의 중요성을 전 세계에 알리는 교육의 장으로 기능하고 있습니다.</p>
-                    <h4>주요 전시 및 구조</h4>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>광장 구역 (외부):</strong> 기념관에 들어서면 '파괴된 성벽', '가파(家破)' 등 희생자들의 고통을 형상화한 대형 조각들이 관람객을 맞이합니다. 무채색의 날카로운 건축 디자인은 비극적 분위기를 극대화합니다.</li>
-                        <li><strong>유골 진열 구역 (만인갱):</strong> 이곳은 기념관의 심장부로, 발굴된 희생자들의 유골을 그대로 보존하여 전시하고 있습니다. 정리되지 않은 채 뒤엉킨 유골들은 당시의 참혹했던 상황을 그 어떤 설명보다도 강력하게 증언합니다.</li>
-                        <li><strong>사료 진열 구역 (내부 전시관):</strong> 학살 당시의 사진, 영상, 생존자들의 육성 증언, 외신 기자들의 기록, 전범 재판 자료 등 방대한 사료가 전시되어 있습니다. 시간 순서에 따라 구성된 전시를 따라가다 보면 학살의 전개 과정을 입체적으로 이해할 수 있습니다.</li>
-                        <li><strong>평화 공원:</strong> 모든 관람이 끝나는 지점에는 평화를 기원하는 조각상과 수목이 조성되어 있습니다. 어둡고 무거운 전시관을 빠져나와 빛을 마주하며, 비극의 역사를 넘어 평화로운 미래를 다짐하게 하는 상징적인 공간입니다.</li>
-                    </ul>
-                </div>
-                <div id="tab-content-2" class="tab-content">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">난징 리지샹 위안소 옛터 진열관</h3>
-                    <p class="text-gray-600 mb-6">한과 눈물이 서린 역사의 현장</p>
-                    <h4>개요 및 역사적 배경</h4>
-                    <p>아시아 최대 규모이자 가장 온전하게 보존된 일본군 '위안부' 제도 관련 유적지입니다. 1937년 말, 일본군이 점령 직후 민가를 징발하여 설립한 '동운 위안소'와 '고와 위안소'가 있던 곳으로, 수많은 중국과 조선의 여성들이 이곳으로 끌려와 끔찍한 성노예 피해를 겪었습니다. 특히 한국인 피해자 고(故) 박영심 할머니께서 2003년 이곳을 직접 찾아와 자신이 겪었던 피해 사실을 증언하시면서, 이곳은 국적을 넘어선 여성 인권 유린의 현장이자 한중 연대의 상징적인 장소가 되었습니다.</p>
-                    <h4>주요 전시 및 구조</h4>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>피해자들의 초상:</strong> 진열관에 들어서면 벽면을 가득 채운 한중 양국의 피해 할머니들의 흑백 사진이 관람객을 압도합니다. 각 사진 아래에는 그분들의 이름과 고통스러웠던 증언이 기록되어 있습니다.</li>
-                        <li><strong>복원된 위안소:</strong> 당시 위안부들이 생활했던 좁고 참혹한 방의 모습을 그대로 재현했습니다. 한 평 남짓한 공간에 놓인 낡은 침대와 세면 도구 등은 비인간적인 환경을 생생하게 보여줍니다.</li>
-                        <li><strong>눈물 자국 벽 (泪洒墙):</strong> 피해 할머니들의 얼굴이 부조로 새겨진 벽 아래로 물이 끊임없이 흘러내려 마치 눈물을 흘리는 것처럼 보이는 설치물입니다. 할머니들의 마르지 않는 눈물과 한을 상징하며, 보는 이의 마음을 깊이 울립니다.</li>
-                        <li><strong>국제적 연대:</strong> '위안부' 문제가 단지 한중 양국에 국한된 것이 아니라, 전 세계적인 전시 성폭력 문제임을 알리고 국제 사회의 연대를 촉구하는 자료들도 함께 전시되어 있습니다.</li>
-                    </ul>
-                </div>
-                <div id="tab-content-3" class="tab-content">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">중산릉 (中山陵)</h3>
-                    <p class="text-gray-600 mb-6">중국 근대화의 상징, 혁명의 아버지가 잠든 곳</p>
-                    <h4>개요 및 인물 소개</h4>
-                    <p>중국 혁명의 아버지이자 신해혁명을 이끌어 아시아 최초의 공화국인 중화민국을 건립한 쑨원(孫文, 호: 中山)의 묘입니다. 난징 동쪽의 자금산(紫金山) 남쪽 기슭에 자리 잡고 있으며, 중국 근대 건축사상 가장 웅장하고 대표적인 기념 건축물로 꼽힙니다. 쑨원은 "혁명은 아직 성공하지 못했다"는 유언을 남겼으며, 그의 사후 국민당 정부는 그의 위업을 기리고 혁명 정신을 계승하기 위해 이곳에 거대한 능을 조성했습니다. 중국인들에게 이곳은 단순한 무덤을 넘어 민족적 자부심과 혁명정신을 상징하는 성지와도 같은 곳입니다.</p>
-                    <h4>주요 구조와 상징</h4>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>광장과 패방:</strong> 능의 시작점에는 '박애(博愛)'라고 쓰인 거대한 패방(牌坊, 문 형태의 구조물)이 서 있습니다. 이는 쑨원의 사상을 함축적으로 보여줍니다.</li>
-                        <li><strong>묘도와 392개 계단:</strong> 패방에서 제당까지 약 480미터의 묘도가 이어지며, 그 끝에는 392개의 화강암 계단이 있습니다. 이 숫자는 당시 중국의 인구 3억 9천 2백만 명을 상징하며, 모든 인민이 혁명의 주체임을 의미합니다. 계단을 오르며 아래를 내려다보면 광장은 보이지 않아, 혁명의 길이 험난함을 상징한다고 합니다.</li>
-                        <li><strong>제당(祭堂):</strong> 능의 가장 높은 곳에 위치한 핵심 건물입니다. 중국 전통 궁전 양식과 서양 건축 양식이 결합되어 있습니다. 중앙에는 쑨원의 좌상이 안치되어 있고, 벽에는 그의 혁명 강령인 '건국대강(建國大綱)'이 새겨져 있습니다. 천장에는 중화민국을 상징하는 청천백일기 문양이 모자이크로 장식되어 있습니다.</li>
-                        <li><strong>묘실:</strong> 제당 뒤편에 위치하며, 쑨원의 관이 안치된 곳입니다. 일반인에게는 공개되지 않으며, 제당에서 그의 와상(누워있는 모습의 조각상)을 볼 수 있습니다.</li>
-                    </ul>
-                </div>
-                <div id="tab-content-4" class="tab-content">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-2">명효릉 (明孝陵)</h3>
-                    <p class="text-gray-600 mb-6">명나라를 연 황제의 위엄이 서린 세계문화유산</p>
-                    <h4>개요 및 역사적 가치</h4>
-                    <p>명나라를 건국한 초대 황제 주원장(朱元璋, 연호: 洪武)과 그의 아내 마황후가 함께 묻힌 능입니다. 2003년 유네스코 세계문화유산으로 등재되었으며, 이후 베이징의 명십삼릉, 선양의 청대릉 등 후대 황제릉의 건축 양식에 지대한 영향을 끼친 원형으로 평가받습니다. '효(孝)'를 통치의 근본으로 삼았던 주원장의 뜻을 기려 '효릉'이라는 이름이 붙었습니다. 600년이 넘는 세월 동안 거의 도굴되지 않고 원형을 보존하고 있어 역사적, 예술적 가치가 매우 높습니다.</p>
-                    <h4>주요 구조와 볼거리</h4>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>신도(神道):</strong> '영혼이 다니는 길'이라는 뜻으로, 명효릉 관광의 백미입니다. 길 양옆으로 낙타, 코끼리, 사자, 해태, 기린 등 6종류의 동물 석상과 전설 속 동물인 해치, 그리고 무인, 문인 석상이 각 2쌍씩 총 12쌍이 장엄하게 도열해 있습니다. 이 석상들은 황제의 권위를 상징하고 사후 세계를 지키는 역할을 합니다.</li>
-                        <li><strong>금수교와 문무방문:</strong> 신도를 지나면 능의 중심 구역으로 들어서는 문인 문무방문(文武方門)에 이릅니다.</li>
-                        <li><strong>효릉전과 방성명루:</strong> 효릉전은 제사를 지내던 본전 건물로 현재는 터만 남아있습니다. 그 뒤로 보이는 방성명루(方城明樓)는 거대한 성채 형태의 건물로, 내부에 황제의 공덕을 기리는 비석이 있습니다. 붉은색의 거대한 건물이 압도적인 위용을 자랑합니다.</li>
-                        <li><strong>보정(宝顶):</strong> 방성명루 뒤편에 있는 거대한 원형 봉분으로, 주원장과 마황후가 잠들어 있는 곳입니다. 둘레가 약 400미터에 달하며, 수백 년 된 나무들이 울창하게 자라 신성한 분위기를 자아냅니다.</li>
-                    </ul>
+        <!-- 메인 타임라인 -->
+        <main>
+            <!-- 1단계 -->
+            <div class="timeline-item-container">
+                <div class="timeline-dot border-blue-500"></div>
+                <p class="text-sm font-semibold text-blue-600">주기 1-3일차</p>
+                <h2 class="text-2xl font-bold text-gray-800 mt-1">1단계: 생리 시작 및 병원 방문</h2>
+                <div class="mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <p class="mb-4">생리가 시작되면 병원에 방문하여 기저 초음파로 난소 상태를 확인하고 배란 유도 방식을 결정합니다.</p>
+                    <!-- 생리통 관리 섹션 -->
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-md">
+                        <h3 class="font-bold text-blue-800">💡 생리통이 심하다면?</h3>
+                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+                            <li><strong>온찜질:</strong> 아랫배나 허리를 따뜻하게 해주세요.</li>
+                            <li><strong>휴식 및 스트레칭:</strong> 가벼운 요가나 충분한 휴식이 도움됩니다.</li>
+                            <li><strong>따뜻한 차:</strong> 생강차, 캐모마일차 등으로 몸을 따뜻하게 유지하세요.</li>
+                            <li><strong>진통제 상담:</strong> 복용 전 <strong class="text-red-600">반드시 의사와 상의</strong>하세요.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-6 py-4 text-center text-sm">
-            <p>&copy; 2025 프리네가족 난징 역사 기행. All rights reserved.</p>
-        </div>
-    </footer>
+            <!-- 2단계 -->
+            <div class="timeline-item-container">
+                <div class="timeline-dot border-green-500"></div>
+                <p class="text-sm font-semibold text-green-600">주기 3-12일차</p>
+                <h2 class="text-2xl font-bold text-gray-800 mt-1">2단계: 난포 성장</h2>
+                <div class="mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <p>클로미펜, 페마라 같은 경구약이나 고날에프 등 주사제를 투여하여 난포를 키웁니다. 초음파로 난포 크기(<strong class="text-green-600">목표: 18-20mm</strong>)와 자궁 내막 두께를 주기적으로 확인합니다.</p>
+                </div>
+            </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            function switchTab(tabNumber) {
-                tabButtons.forEach(button => {
-                    if (button.dataset.tab === tabNumber) {
-                        button.classList.add('tab-active');
-                        button.classList.remove('tab-inactive');
-                    } else {
-                        button.classList.add('tab-inactive');
-                        button.classList.remove('tab-active');
-                    }
-                });
-                tabContents.forEach(content => {
-                    if (content.id === `tab-content-${tabNumber}`) {
-                        content.classList.add('tab-content-active');
-                    } else {
-                        content.classList.remove('tab-content-active');
-                    }
-                });
-            }
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    switchTab(button.dataset.tab);
-                });
-            });
-            switchTab('1');
-        });
-    </script>
+            <!-- 3단계 -->
+            <div class="timeline-item-container">
+                <div class="timeline-dot border-purple-500"></div>
+                <p class="text-sm font-semibold text-purple-600">주기 12-16일차</p>
+                <h2 class="text-2xl font-bold text-gray-800 mt-1">3단계: 배란 유도 및 임신 시도</h2>
+                <div class="mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <p>난포가 충분히 자라면 난포를 터뜨리는 주사(hCG, 오비드렐 등)를 맞습니다. 주사 후 <strong class="text-red-600">24~36시간 이내</strong>에 배란이 되므로, 의사가 지정한 날짜에 임신을 시도합니다(숙제일).</p>
+                </div>
+            </div>
+
+            <!-- 4단계 -->
+            <div class="timeline-item-container">
+                <div class="timeline-dot border-yellow-500"></div>
+                <p class="text-sm font-semibold text-yellow-600">주기 15-28일차</p>
+                <h2 class="text-2xl font-bold text-gray-800 mt-1">4단계: 황체기</h2>
+                <div class="mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <p>배란 후 황체에서 분비되는 프로게스테론이 자궁 내막을 두껍게 유지하여 착상을 돕습니다. 필요시 질정이나 주사제로 황체기를 보강하며 안정을 취하는 시기입니다.</p>
+                </div>
+            </div>
+
+            <!-- 5단계 -->
+            <div class="timeline-item-container">
+                <div class="timeline-dot border-pink-500"></div>
+                <p class="text-sm font-semibold text-pink-600">주기 28일차 이후</p>
+                <h2 class="text-2xl font-bold text-gray-800 mt-1">5단계: 임신 확인</h2>
+                <div class="mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <p>배란일 기준 약 2주 후, 임신 테스트기나 혈액 검사로 임신 여부를 확인합니다. 임신이 아닐 경우, 다시 1단계부터 새로운 주기를 시작합니다.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-sm text-gray-500">※ 본 정보는 일반적인 과정에 대한 안내이며, 개인의 상태에 따라 달라질 수 있습니다. 정확한 내용은 반드시 담당 의사와 상의하세요.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
